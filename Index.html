@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Selamat Ulang Tahun ❤️</title>
+<style>
+* { box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body {
+margin: 0;
+min-height: 100vh;
+background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+display: flex;
+align-items: center;
+justify-content: center;
+color: #fff;
+text-align: center;
+}
+.card {
+background: rgba(0,0,0,0.35);
+padding: 30px;
+border-radius: 20px;
+max-width: 420px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+animation: fadeIn 1.5s ease;
+}
+h1 { margin-top: 0; }
+p { line-height: 1.6; }
+img {
+width: 100%;
+border-radius: 15px;
+margin: 15px 0;
+object-fit: cover;
+}
+.btn {
+display: inline-block;
+margin-top: 20px;
+padding: 12px 24px;
+background: #ff5e7e;
+color: #fff;
+text-decoration: none;
+border-radius: 30px;
+font-weight: bold;
+transition: 0.3s;
+}
+.btn:hover { background: #ff2f63; }
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body><!-- ===== HALAMAN 1 ===== --><div class="card" id="page1">
+<h1>🎉 Selamat Ulang Tahun 🎂</h1>
+<p>
+Hari ini dunia kedengeran lebih manis, soalnya kamu lahir.
+Terima kasih udah jadi alasan senyumku, tempat pulangku,
+dan orang yang selalu bikin hariku rame.
+</p> <!-- GANTI FOTO DI SINI --> <img src="foto-kamu-1.jpg" alt="Foto Kita" /> <p>
+Semoga semua doa baik nemuin kamu satu-satu,
+dan aku masih boleh ada di setiap cerita hidupmu. 💖
+</p><a href="#" class="btn" onclick="nextPage(2)">Lanjut ➜</a>
+
+</div><!-- ===== HALAMAN 2 ===== --><div class="card" id="page2" style="display:none">
+<h1>💌 Dari Hati ke Hati</h1>
+<p>
+Maafin aku ya kalau aku sering ngeselin,
+kadang keras kepala, kadang nyebelin tanpa sadar.
+Tapi percayalah, itu bukan karena aku gak sayang.
+</p> <!-- GANTI FOTO DI SINI --> <img src="foto-kamu-2.jpg" alt="Foto Kenangan" /> <p>
+Katanya cinta itu gak selalu manis,
+tapi justru bumbu-bumbu kecil itulah
+yang bikin rasanya gak pernah hambar.
+</p><a href="#" class="btn" onclick="nextPage(3)">Lanjut ➜</a>
+
+</div><!-- ===== HALAMAN 3 ===== --><div class="card" id="page3" style="display:none">
+<h1>❤️ Untuk Kita</h1>
+<p>
+Di ulang tahunmu ini,
+aku gak janji jadi yang paling sempurna.
+Tapi aku janji untuk terus belajar jadi
+yang paling tulus buat kamu.
+</p> <!-- GANTI FOTO DI SINI --> <img src="foto-kamu-3.jpg" alt="Foto Terakhir" /> <p>
+Selamat bertambah usia, sayang.
+Semoga aku masih jadi bagian
+dari masa depan yang kamu doakan. 🌙✨
+</p>
+</div><!-- ===== MUSIK ===== --><audio id="bgm" autoplay loop>
+<!-- GANTI FILE MUSIK DI SINI -->
+<source src="lagu-romantis.mp3" type="audio/mpeg" />
+</audio><script>
+function nextPage(num) {
+document.getElementById('page1').style.display = 'none';
+document.getElementById('page2').style.display = 'none';
+document.getElementById('page3').style.display = 'none';
+document.getElementById('page' + num).style.display = 'block';
+
+// Paksa play musik (buat HP yang ngeblok autoplay)
+const audio = document.getElementById('bgm');
+audio.play().catch(() => {});
+}
+</script></body>
+</html>
